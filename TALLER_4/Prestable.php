@@ -4,4 +4,3 @@ interface Prestable {
     public function devolver();
     public function estaDisponible();
 }
-   
