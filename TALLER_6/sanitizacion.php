@@ -1,5 +1,5 @@
 <?php
-function sanitizarNombre($nombre) {
+function valorSanitizado ($nombre) {
     return filter_var(trim($nombre), FILTER_SANITIZE_STRING);
 }
 
