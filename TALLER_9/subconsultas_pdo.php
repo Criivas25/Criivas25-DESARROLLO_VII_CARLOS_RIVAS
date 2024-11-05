@@ -17,8 +17,8 @@ try {
     
     echo "<h3>Productos con precio mayor al promedio de su categoría:</h3>";
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        echo "Producto: {$row['nombre']}, Precio: ${$row['precio']}, ";
-        echo "Categoría: {$row['categoria']}, Promedio categoría: ${$row['promedio_categoria']}<br>";
+        echo "Producto: {$row['nombre']}, Precio: {$row['precio']}, ";
+        echo "Categoría: {$row['categoria']}, Promedio categoría: {$row['promedio_categoria']}<br>";
     }
 
     // 2. Clientes con compras superiores al promedio
@@ -39,8 +39,8 @@ try {
     
     echo "<h3>Clientes con compras superiores al promedio:</h3>";
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        echo "Cliente: {$row['nombre']}, Total compras: ${$row['total_compras']}, ";
-        echo "Promedio general: ${$row['promedio_ventas']}<br>";
+        echo "Cliente: {$row['nombre']}, Total compras: {$row['total_compras']}, ";
+        echo "Promedio general: {$row['promedio_ventas']}<br>";
     }
 
 } catch(PDOException $e) {
