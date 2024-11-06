@@ -21,9 +21,9 @@ function mostrarResumenCategorias($conn) {
         echo "<td>{$row['categoria']}</td>";
         echo "<td>{$row['total_productos']}</td>";
         echo "<td>{$row['total_stock']}</td>";
-        echo "<td>${$row['precio_promedio']}</td>";
-        echo "<td>${$row['precio_minimo']}</td>";
-        echo "<td>${$row['precio_maximo']}</td>";
+        echo "<td>{$row['precio_promedio']}</td>";
+        echo "<td>{$row['precio_minimo']}</td>";
+        echo "<td>{$row['precio_maximo']}</td>";
         echo "</tr>";
     }
     echo "</table>";
@@ -49,7 +49,7 @@ function mostrarProductosPopulares($conn) {
         echo "<td>{$row['producto']}</td>";
         echo "<td>{$row['categoria']}</td>";
         echo "<td>{$row['total_vendido']}</td>";
-        echo "<td>${$row['ingresos_totales']}</td>";
+        echo "<td>{$row['ingresos_totales']}</td>";
         echo "<td>{$row['compradores_unicos']}</td>";
         echo "</tr>";
     }
