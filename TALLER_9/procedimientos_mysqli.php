@@ -82,6 +82,20 @@ function reporteBajoStock($conn) {
     }
 }
 
+function calcularComision($conn, $vendedor_id) {
+    $query = "CALL sp_calcular_comision(?, @comision)";
+    $stmt = mysqli_prepare($conn, $query);
+    mysqli_stmt_bind_param($stmt, "i", $vendedor_id);
+    mysqli_stmt_execute($stmt);
+
+    $result = mysqli_query($conn, "SELECT @comision as comision");
+    $row = mysqli_fetch_assoc($result);
+    
+    echo "Comisión calculada: $" . $row['comision'];
+    
+    mysqli_stmt_close($stmt);
+}
+
 // Ejemplos de uso
 registrarVenta($conn, 1, 1, 2);
 obtenerEstadisticasCliente($conn, 1);
